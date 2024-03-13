@@ -6,7 +6,8 @@ dotenv.config();
 Cashfree.XClientId = process.env.cashfree_api_key;
 Cashfree.XClientSecret = process.env.cashfree_secret_key;
 Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
-// Cashfree.XEnvironment = Cashfree.Environment.PRODUCTION;
+console.log(process.env.cashfree_api_key)
+console.log(process.env.cashfree_secret_key)
 
 // Create Token
 export const createPaymentSeccion = async(req, res) => {
