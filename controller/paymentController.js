@@ -77,12 +77,13 @@ export const verifyPaymentAnil = async(req, res) => {
 export const createPaymentAvanshikaSeccion = async(req, res) => {
     const {plan} = req.body;
     const orderId = String(Math.random()).split('.')[1] + Date.now();
-    const amount = 0;
-    // if(plan === 1){
-    //     amount == 149 ;
-    // }else{
-    //     amount == 1499 ;
-    // }
+    let amount = 0;
+    if(plan === 1){
+        amount = 149 ;
+    }else{
+        amount = 1499 ;
+    }
+    console.log("amount", amount)
     
     var request = {
         "order_amount": amount,
@@ -90,7 +91,7 @@ export const createPaymentAvanshikaSeccion = async(req, res) => {
         "order_id": orderId,
         "customer_details": {"customer_id": "walterwNrcMi", "customer_phone": "8474090589"},
         "order_meta": {
-            "return_url": `https://avanshika.onrender.com/avanshika/checkout/${orderId}`
+            "return_url": `https://coderanil.vercel.app/avanshika/checkout/${orderId}`
         }
     };
 

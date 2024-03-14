@@ -11,7 +11,7 @@ const AvanshikaPaymentPage = () => {
 
 // Intialize Test || Production
     let cashfree;
-    var initializeSDK = async function () {          
+    var initializeSDK = async function () {
         cashfree = await load({
             mode: "sandbox"
         });
@@ -20,8 +20,7 @@ const AvanshikaPaymentPage = () => {
 
   const handlePayment = async() => {
     try {
-        const {data} = await axios.post('/api/v1/payment/session', {plan:params.id});
-        console.log(data)
+        const {data} = await axios.post('/api/v1/payment/avanshika/session', {plan:params.id});
         if(data.success){
             doPayment(data?.response?.payment_session_id);
         }else{
