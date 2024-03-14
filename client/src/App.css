@@ -32,6 +32,15 @@
 
 .res-navbar-item-box{}
 .res-navbar-item-box a{}
+.navbar-pay{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
 
 @media screen and (max-width: 800px) {

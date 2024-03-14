@@ -2,9 +2,9 @@ import {useEffect} from 'react';
 import { load } from "@cashfreepayments/cashfree-js";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
-import '../../style/Loading.css'
+import '../../../style/Loading.css'
 
-const PaymentPage = () => {
+const AvanshikaPaymentPage = () => {
 
   window.document.title = 'Avanshika-checkout';
   const params = useParams();
@@ -54,4 +54,4 @@ const PaymentPage = () => {
   )
 }
 
-export default PaymentPage
+export default AvanshikaPaymentPage

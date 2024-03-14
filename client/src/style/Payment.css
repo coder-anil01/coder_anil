@@ -1,0 +1,33 @@
+.anilcheckout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 71vh;
+}
+.anilcheckout-container{
+    background-color: white;
+    padding: 50px 25px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.anilcheckout-failed-icon,
+.anilcheckout-success-icon{
+    background-color: green;
+    color: white;
+    font-size: 60px;
+    padding: 10px 10px 0 10px;
+    border-radius: 50%;
+}
+.anilcheckout-text{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-block: 20px;
+}
+
+.anilcheckout-failed-icon{
+    background-color: red !important;
+}

@@ -9,6 +9,7 @@ import Contact from '../pages/Contact';
 import Skills from '../pages/Skills';
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
+import Payment from '../pages/payment/anil/Payment';
 
 const Navbar = () => {
 
@@ -19,6 +20,7 @@ const Navbar = () => {
   const blogs = useRef();
   const contact = useRef();
   const[menuopen, setMenuopen] = useState(false);
+  const[payment, setPayment] = useState(false);
 
   const scrollHandler = (elementRef) => {
     setMenuopen(false)
@@ -40,6 +42,7 @@ const Navbar = () => {
         <NavLink onClick={() => scrollHandler(services)} >Service</NavLink>
         <NavLink onClick={() => scrollHandler(blogs)} >Blogs</NavLink>
         <NavLink onClick={() => scrollHandler(contact)} >Contacts</NavLink>
+        <button className='navbar-pay' onClick={()=>setPayment(prev=>!prev)}>pay</button>
       </div>
       <div className="navbar-menu">
       {menuopen ?
@@ -70,6 +73,7 @@ const Navbar = () => {
       <div ref={contact}><Contact /></div>
     </div>
     
+    {payment && <Payment/>}
     </>
   )
 }

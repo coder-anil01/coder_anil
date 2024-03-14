@@ -1,3 +1,4 @@
+.payment,
 .loading{
     position: fixed;
     top: 0;
@@ -8,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 .loading img{
     width: 150px;
@@ -27,4 +29,30 @@
     0% {transform: rotate(0deg);}
     50% {transform: rotate(230deg);}
     100% {transform: rotate(360deg);}
+}
+
+.payment-container{
+    display: flex;
+    flex-direction: column;
+}
+.payment-text{
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid green;
+}
+.terms{
+    display: flex;
+    align-items: center;
+    margin-block: 20px 15px;
+}
+.terms input{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.terms div{
+    color: #02029d;
+}
+.desibled{
+    background-color: #008000bd;
 }

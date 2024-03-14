@@ -11,8 +11,9 @@ import TermsandConditions from './pages/policy/TermsandConditions';
 import RefundPolicy from './pages/policy/RefundPolicy';
 import DeliveryPolicy from './pages/policy/DeliveryPolicy';
 import ScrollToTop from './component/ScrollToTop';
-import PaymentPage from './pages/payment/PaymentPage';
-import CheackOut from './pages/payment/CheackOut';
+import AnilCheckOut from './pages/payment/anil/AnilCheckOut';
+import AvanshikaPaymentPage from './pages/payment/avanshika/AvanshikaPaymentPage';
+import AvanshikaCheackOut from './pages/payment/avanshika/AvanshikaCheackOut';
 
 
 function App() {
@@ -34,8 +35,10 @@ function App() {
           </Route>
 
 {/* PAYMENT */}
-          <Route path="/avanshika/payment/:id" exact element={<PaymentPage/>}/>
-          <Route path="/checkout/:id" exact element={<CheackOut/>}/>
+          <Route path="/checkout/:id" exact element={<AnilCheckOut/>}/>
+
+          <Route path="/avanshika/payment/:id" exact element={<AvanshikaPaymentPage/>}/>
+          <Route path="/avanshika/checkout/:id" exact element={<AvanshikaCheackOut/>}/>
 
         </Routes>
         <Footer/>

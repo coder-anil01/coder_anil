@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import '../../style/Loading.css'
+import '../../../style/Loading.css'
 
-const CheackOut = () => {
+const AvanshikaCheackOut = () => {
     window.document.title = 'Avanshika-checkout';
     const params = useParams();
 
@@ -20,4 +20,4 @@ const CheackOut = () => {
   )
 }
 
-export default CheackOut
+export default AvanshikaCheackOut
